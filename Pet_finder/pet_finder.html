@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet_Finder</title>
+</head>
+<body>
+    
+
+        Pet Finder:
+        |_1.Spider 2.Parrot
+        |_3.Snake 4.Fish
+        |
+        |_5. Hamster 6.Rabbit
+        7.Dog 8.Cat
+
+
+                            Do you like pets with fur?
+                    |                                                    |
+                No                                                       Yes
+                |                                                           |
+        Snakes, Spider, Parrot, Fish                      Rabbit, Dog, Cat, Hamster
+                    |              \                                      |
+        Do you want a pet          Do you want a pet                Do you want a pet rodent?
+            with scales?               that flies?                    |                 |
+                |                       |                            Yes               No
+        Yes                         Yes         No                      |                 |
+            |                           |        |              Rabbit, Hamster         Cat, Dog
+        Fish, Snake                 Parrot     Spider               |                       |
+            |                                                 Do you want a pet                Do you want a pet
+        Do you want a pet that slithers?                       that runs on wheels?             that does tricks?
+            |              |                                   |            |                  |            |   
+        Yes                No                             Yes              No              Yes             No
+        |                |                                |                 |                |               |
+        Snake            Fish                           Hamster          Rabbit            Dog             Cat
+
+
+
+
+        <p>lets begin to find a Pet?</p>
+        <form action= "#" onsubmit="event.preventDefault(); petFinder()">
+            <input type= "submit" value="Begin">
+        </form>
+
+    <script>
+        function petFinder() {
+
+            var answer = prompt("Do you like pets with fur?");
+            if (answer.toLowerCase() === "yes") { //yes
+
+                var answer = prompt('Do you want a pet rodent?');
+                if (answer.toLowerCase() === "yes") {
+                    var answer = prompt('Do you want a pet that runs on wheels?');
+                    if (answer.toLowerCase() === "yes") {
+                            alert("Hamster");
+                    }
+                    if (answer.toLowerCase() === "no") {
+                            alert("Rabbit");
+                    } 
+                }
+
+                if (answer.toLowerCase() === "no") {
+                    var answer = prompt('Do you want a pet that does tricks?');
+                    if (answer.toLowerCase() === "no") {
+                        alert("Cat");
+                    }
+                    if (answer.toLowerCase() === "yes") {
+                        alert("Dog");
+                    }
+                }
+            }
+
+            if(answer.toLocaleLowerCase() === "yes") {
+                var answer = prompt('Do you want a pet with scales?');
+                if (answer.toLowerCase() === "yes") {
+                    alert("Snake, Fish");
+                }
+                    var answer = prompt('Do you want a pet that slithers?');
+                    if (answer.toLowerCase() === "yes") {
+                            alert("Snake");
+                    } 
+                    if (answer.toLowerCase() === "no") {
+                        alert("Fish");
+                }
+
+                if (answer.toLowerCase() === "no") {
+                    var answer = prompt('Do you want a pet that flies?');
+                    if (answer.toLowerCase() === "no") {
+                        alert("Spider");
+                    }
+                    if (answer.toLowerCase() === "yes") {
+                        alert("Parrot");
+                    }
+                }
+            }
+
+        }   
+
+    </script>
+
+</body>
+</html>
