@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hero Generator</title>
+</head>
+<body onload="generateHero();">
+
+
+        <p>The awesome Static Shock can control electromagnetism.</p>
+        <p>The flexible Rubberband Man can stretch his body.</p>
+        <p>The vicious HotStreak can blow fire .</p>
+        <p>The incredible Permafrost can crontols snowstorms.</p>
+        <p>The powerful Time-Zone can warp time.</p>
+
+
+    <h1>Hero Generator</h1>
+        <p>3 Arrays min</p>
+        <p>5 Adjectives</p> 
+        <p>min 5 Names</p> 
+        <p>min 5 Powers </p>
+
+        <p>Click (Refresh button) in browser to change the sentence to show Random adjectives describing the TV show characters on Static Shock. </p>
+
+
+
+            <div id ="output"></div>
+        
+        <script>
+            function generateHero(){
+                var adjs = ["The awesome", "The flexible", "The vicious", "The incredible", "The powerdul"] 
+                var names = ["Satic Shock", "Rubbberband Man","HotStreak", "Permafrost","Time_ZOne"];
+                var powers = ["can control electromagnetism", "can stretch his body", "can blow fire", " can control snowstorms", "can warp time"];
+                var output = document.getElementById("output");
+
+                output.textContent = adjs[generateRandom()] +' '+ names[generateRandom()] +" "+ powers[
+                    generateRandom()];
+       
+                }
+
+                function generateRandom() {
+                 return Math.round(Math.random()* 4);
+                }
+
+        </script>
+
+
+</body>
+</html>
