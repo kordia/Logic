@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vowel and consonant Counter</title>
+</head>
+<body>
+
+        <p> The program will ask the user to enter a word or string and then
+        the program will count the number of vowels and consonants given by the user.</p>
+            
+    
+    <p>Vowels and Consonants Counter</p> 
+    
+    <form action = "#" onsubmit= "event.preventDefault(); vowel()";>
+        <input type ="text" id= "str">
+        <input type = "submit" value= "count">
+    </form>
+    <span id= "output"></span>
+    <script>
+        function vowel(){
+            var output = document.getElementById("output")
+            var vowelCount = 0;
+            var conCount = 0;
+            var letterCount = {};
+            var letterCountText = "";
+            var vowels = ['a','e','i','o','u']
+            var consonants = ['b','c', 'd','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w', 'x','y','z']
+            var str = docoment.getElementById("str").value.toLowerCase();
+
+
+            for (var i = 0; i < str.length; i++){
+                var char = str[i];
+
+                vowels.forEach(function(el){
+
+                    if(char === el){
+                        vowelCount++;
+
+                        if(letterCount.hasOwnProperty(el)){
+                            letterCount[el] += i;
+                        } else {
+                            letterCount[el] = 1;
+                        }
+                     }
+                    });
+
+                
+                }
+                for ( var key in letterCount) {
+                    if(letterCount.hasOwnProperty(key)){
+                        letterCountText += key + '=' + letterCount[key] + ",";
+                    }
+                }
+                
+
+                output.innerHTML = " Your text contains" + vowelCount + "vowel and" + conCount +
+                 "constonants. <br>" + letterCountText;  
+            }
+    </script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

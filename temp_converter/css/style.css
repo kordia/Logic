@@ -1,0 +1,14 @@
+body{
+background-color: yellow;
+color: red;
+}
+.title{
+    text-align: center;
+}
+.image{
+    padding-left: 200px;
+    padding-top: 20px;
+}
+.End{
+    padding-top: 20px;
+}

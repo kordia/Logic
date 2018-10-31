@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Yo Momma Jokes</title>
+</head>
+<body onload="newJoke();">
+   <div class= "color">
+        <div class= "title container">
+            <div class='row'>
+                <div class='col-sm-12'> 
+                    <h1>Yo Momma Jokes</h1>
+                </div>    
+            </div>
+        </div>
+        <div class= "image">
+            <div class= "title container">
+                <div class='row'>
+                    <div class='col-sm-12'> 
+                        <img class="img-responsive" src="images/pic.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class= "joke container">
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <div id="jokeDisplay">
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class= "final container">
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <button onclick= "newJoke()">New Joke</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function newJoke(){
+            var jokes= ["Yo momma so fat, that when she asked for a water bed, they threw a blanket over the pacific ocean.","Yo momma so ugly, she makes onions cry.","Yo momma so stupid, she took a spoon to the Super Bowl.", "Yo momma glasses are so thick, when she looks at a map she sees people waving.",
+            "Yo momma so ugly, when you look up ugly in the dictionary, there's a picture of her.","Yo momma so stupid, she thought a quarterback is a refund.","Yo momma is so dumb, she tripped over a cordless phone.", "Yo momma so fat, her belt size is the equator.","Yo momma so stupid, she tried to alphabetise a bag of M&M's.",
+            "Yo momma so poor, she can't get rid of the roaches in her house 'cause they pay half the rent!", "Yo momma's so short, she can sit on a dime and swing her legs.","Yo momma so fat, her belly button got an echo.", "Yo momma so stupid, that she put lipstick on her forehead, talking about she was trying to makeup her mind.", "Yo momma hair so nappy, that she has to take Tylenol just to comb it.", "Yo momma so fat that she left home wearing high heels and came back wearing flip flops.", 
+            "Yo momma so stupid, she put two quarters in her ear, to listen to 50 cent.", "Yo momma so stupid, that she put her watch in the bank to save time.","Yo momma teeth so yellow, that when she smiles, traffic slows down.","Yo momma so short, she needs a ladder to pick up a dime.","Yo momma so old, her birth certificate expired."]
+
+
+        
+            var randomNumber=Math.floor(Math.random()*(20));
+            document.getElementById('jokeDisplay').innerHTML=jokes[randomNumber];
+        }
+    
+    </script>
+
+
+
+
+
+
+</body>
+</html>
